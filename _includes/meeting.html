@@ -1,4 +1,5 @@
 <div style="height: 250px; ">
+<div>
   <h3>{{ site.data.meeting.title }}</h3>
   <div>{{ site.data.meeting.description }}</div>
   <div> زمان : {{ site.data.meeting.date }}</div>
@@ -12,8 +13,8 @@
   {% if site.data.meeting.author %}
     {% if site.data.people[site.data.meeting.author] %}
       {% assign author = site.data.people[site.data.meeting.author] %}
-      توسط : 
-      <img src="{{"files/people/" | prepend: site.baseurl | append: author.image }}">
+      توسط : <br>
+      <img class="img-circle" style="width: 32px; height: 32px;" src="{{"files/people/" | prepend: site.baseurl | append: author.image }}">
       {{ author.name }}
   
     {% else %}
@@ -21,12 +22,15 @@
     {% endif %}
   {% endif %}
   
+</div>
+<div >
+  
   {% if site.data.meeting.image %}
   <img src="{{"files/meeting/" | prepend: site.baseurl | append: site.data.metting.image }}">
   {% else %}
   <img src="{{"files/meeting/" | prepend: site.baseurl | append: "default.jpg" }}">
   {% endif %}
-  
+</div>
   
   
 </div>
