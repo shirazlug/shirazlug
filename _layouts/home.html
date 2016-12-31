@@ -59,7 +59,7 @@
   </section>
 {% endif %}
 
-{% for part in site.sections %}
+{% for part in page.sections %}
   <section id="{{ part.id }}" class="parts" style="{{ part.css }}" style="margin-top: 0px;">
     {% include {{part.tpl}} %}
   </section>
