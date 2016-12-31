@@ -1,10 +1,10 @@
 <div style="height: 250px; " class="row" >
 <div class="col-md-4">
-  <div style="margin: 0 auto;">
+  <div style="margin: 5px auto;">
   {% if site.data.meeting.image %}
-  <img style="width: 100px; height: 100px;" class="img-rounded" src="{{"files/meeting/" | prepend: site.baseurl | append: site.data.metting.image }}">
+  <img style="width: 180px; height: 180px;" class="img-rounded" src="{{"files/meeting/" | prepend: site.baseurl | append: site.data.metting.image }}">
   {% else %}
-  <img style="width: 100px; height: 100px;" class="img-rounded"  src="{{"files/meeting/" | prepend: site.baseurl | append: "default.jpg" }}">
+  <img style="width: 180px; height: 180px;" class="img-rounded"  src="{{"files/meeting/" | prepend: site.baseurl | append: "default.jpg" }}">
   {% endif %}
   </div>
   <a class="btn btn-default" href="#" role="button">جلسات قبل</a>
