@@ -1,0 +1,22 @@
+#- number: number of slide
+#  title: title for image
+#  comment: comment for image
+#  img: image name only in files/slider
+
+
+- number: 0
+  title: 'دوره آموزش رایگان'
+  comment: 'برگزاری چند دوره آموزش زبان برنامه نویسی به کودکان'
+  img: '1.jpg'
+
+- number: 1
+  title: 'برگزاری جلسات آموزشی '
+  comment: ''
+  img: '2.jpg'
+
+- number: 2
+  title: 'بحث آزاد'
+  comment: ''
+  img: '3.jpg'
+
+
