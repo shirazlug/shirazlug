@@ -1,4 +1,15 @@
 <div style="height: 250px; " class="row" >
+<div class="col-md-4">
+  <div style="margin: 0 auto;">
+  {% if site.data.meeting.image %}
+  <img style="width: 100px; height: 100px;" class="img-rounded" src="{{"files/meeting/" | prepend: site.baseurl | append: site.data.metting.image }}">
+  {% else %}
+  <img style="width: 100px; height: 100px;" class="img-rounded"  src="{{"files/meeting/" | prepend: site.baseurl | append: "default.jpg" }}">
+  {% endif %}
+  </div>
+  <a class="btn btn-default" href="#" role="button">جلسات قبل</a>
+</div>
+  
 <div class="col-md-8">
   <h1>{{ site.data.meeting.title }}</h1>
   <div>{{ site.data.meeting.description }}</div>
@@ -23,16 +34,7 @@
   {% endif %}
   
 </div>
-<div class="col-md-4">
-  <div style="margin: 0 auto;">
-  {% if site.data.meeting.image %}
-  <img src="{{"files/meeting/" | prepend: site.baseurl | append: site.data.metting.image }}">
-  {% else %}
-  <img src="{{"files/meeting/" | prepend: site.baseurl | append: "default.jpg" }}">
-  {% endif %}
-  </div>
-  <a class="btn btn-default" href="#" role="button">جلسات قبل</a>
-</div>
+
   
   
 </div>
