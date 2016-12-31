@@ -1,27 +1,27 @@
 <div style="height: 250px; ">
-  <h3>{{ site.data.metting.title }}</h3>
-  <div>{{ site.data.metting.description }}</div>
-  <div> زمان : {{ site.data.metting.date }}</div>
+  <h3>{{ site.data.meeting.title }}</h3>
+  <div>{{ site.data.meeting.description }}</div>
+  <div> زمان : {{ site.data.meeting.date }}</div>
   <div> مکان : 
-  {% if site.data.metting.location %}
-    {{ site.data.metting.location }}
+  {% if site.data.meeting.location %}
+    {{ site.data.meeting.location }}
   {% else %}
     محل معمول جلسات
   {% endif %}
   </div>
-  {% if site.data.metting.author %}
-    {% if site.data.people[site.data.metting.author] %}
+  {% if site.data.meeting.author %}
+    {% if site.data.people[site.data.meeting.author] %}
       {% assign author = site.data.people[page.author] %}
       توسط : 
       <img src="{{"files/people/" | prepend: site.baseurl | append: author.image }}">
       {{ author.name }}
   
     {% else %}
-      توسط :  site.data.metting.author
+      توسط :  site.data.meeting.author
     {% endif %}
   {% endif %}
   
-  {% if site.data.metting.image %}
+  {% if site.data.meeting.image %}
   <img src="{{"files/meeting/" | prepend: site.baseurl | append: site.data.metting.image }}">
   {% else %}
   <img src="{{"files/meeting/" | prepend: site.baseurl | append: "default.jpg" }}">
