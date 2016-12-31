@@ -11,7 +11,7 @@
   </div>
   {% if site.data.meeting.author %}
     {% if site.data.people[site.data.meeting.author] %}
-      {% assign author = site.data.people[page.author] %}
+      {% assign author = site.data.people[site.data.meeting.author] %}
       توسط : 
       <img src="{{"files/people/" | prepend: site.baseurl | append: author.image }}">
       {{ author.name }}
