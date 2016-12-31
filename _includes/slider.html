@@ -10,7 +10,7 @@
   <div class="carousel-inner" role="listbox">
 {% for slide in site.data.slider %}
     <div class="item{% if forloop.first %} active{% endif %}">
-      <img src="{{"static/images/slider/" | prepend: site.baseurl | append: slide.img }}" alt="{{ slide.title }}">
+      <img src="{{"files/slider/" | prepend: site.baseurl | append: slide.img }}" alt="{{ slide.title }}">
       <div class="carousel-caption">
 	{{ slide.comment }}
       </div>
