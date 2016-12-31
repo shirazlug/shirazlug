@@ -24,12 +24,11 @@
   {% if site.data.meeting.author %}
     {% if site.data.people[site.data.meeting.author] %}
       {% assign author = site.data.people[site.data.meeting.author] %}
-      توسط : <br>
       <img class="img-circle" style="width: 32px; height: 32px;" src="{{"files/people/" | prepend: site.baseurl | append: author.image }}">
       {{ author.name }}
   
     {% else %}
-      توسط :  site.data.meeting.author
+      site.data.meeting.author
     {% endif %}
   {% endif %}
   
