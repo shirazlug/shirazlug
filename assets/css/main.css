@@ -1,5 +1,7 @@
 
-
+.parts{
+margin: 0px;
+}
 
 .carousel-inner > .item > img {
     margin: 0 auto;
