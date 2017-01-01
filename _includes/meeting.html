@@ -1,20 +1,9 @@
-<div class="row">
-<div class="col-md-3">
-  <div style="margin:10px;">
-  <div style="margin: 5px auto;width:200px;">
-  {% if site.data.meeting.image %}
-  <img style="width: 180px; height: 180px;" class="img-rounded" src="{{"files/home/" | prepend: site.baseurl | append: site.data.metting.image }}">
-  {% else %}
-  <img style="width: 180px; height: 180px;" class="img-rounded"  src="{{"files/home/" | prepend: site.baseurl | append: "meeting.jpg" }}">
-  {% endif %}
-  <a style="margin: 5px auto; width: 180px;" class="btn btn-default" href="#" role="button">جلسات قبل</a>  
-  </div>
-  
-  </div>
-</div>
-  
-<div class="col-md-9">
-  <div style="margin:10px 32px;">
+<div style="padding:10px;">
+ <table style="width:100%">
+  <tr>
+    <th>
+    
+   <div style="margin:10px 32px;">
   <h1>{{ site.data.meeting.title }}</h1>
   <div>{{ site.data.meeting.description }}</div>
   <div> زمان : {{ site.data.meeting.date }}</div>
@@ -28,16 +17,31 @@
   {% if site.data.meeting.author %}
     {% if site.data.people[site.data.meeting.author] %}
       {% assign author = site.data.people[site.data.meeting.author] %}
+      توسط : 
       <img class="img-circle" style="width: 32px; height: 32px;" src="{{"files/people/" | prepend: site.baseurl | append: author.image }}">
       {{ author.name }}
   
     {% else %}
-      site.data.meeting.author
+       توسط :  {{ site.data.meeting.author  }}
     {% endif %}
   {% endif %}
   </div>
+      
+    </th>
+    <th width="180">
+      
+  {% if site.data.meeting.image %}
+  <img style="width: 180px; height: 180px;" class="img-rounded" src="{{"files/home/" | prepend: site.baseurl | append: site.data.metting.image }}">
+  {% else %}
+  <img style="width: 180px; height: 180px;" class="img-rounded"  src="{{"files/home/" | prepend: site.baseurl | append: "meeting.jpg" }}">
+  {% endif %}
+      
+    </th>
+  </tr>
+  <tr>
+    <th colspan="2" align="right"><a style="margin: 5px auto; width: 180px;" class="btn btn-default" href="#" role="button">جلسات قبل</a>  </th>
+  </tr>
+</table> 
+
 </div>
 
-  
-  
-</div>
