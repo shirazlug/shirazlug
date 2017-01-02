@@ -52,6 +52,7 @@ var vectorLayer = new ol.layer.Vector({
     }),
     target: 'map'
   });
+  map.getView().setCenter([ {{ site.data.address.latitude }} , {{ site.data.address.longitude }} ]);
 </script>
   
 </div>
