@@ -36,6 +36,10 @@ _data/{section name}.yml
 
 files/{section name}/
 
+یا
+
+files/home/
+
 
 
 
