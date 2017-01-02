@@ -1,12 +1,37 @@
 <div >
+  <h1> آدرس </h1>
   <p>{{ site.data.address.address }}</p>
 <div id="map" style="width: 100%; height: 200px"></div>
 <style type="text/css"> @import url("{{"assets/css/ol.css" | prepend: site.baseurl }}"); </style>
 <script src="{{"assets/js/ol.js" | prepend: site.baseurl }}"></script>
 <script>
+var iconFeature = new ol.Feature({
+  geometry: new ol.geom.Point(ol.proj.transform([{{ site.data.address.latitude }},{{ site.data.address.longitude }}], 'EPSG:4326', 'EPSG:3857')),
+  name: 'شیراز لاگ'
+});
+
+
+var iconStyle = new ol.style.Style({
+  image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+    anchor: [0.5, 46],
+    anchorXUnits: 'fraction',
+    anchorYUnits: 'pixels',
+    opacity: 0.75,
+  }))
+});
+
+iconFeature.setStyle(iconStyle);
+
+var vectorSource = new ol.source.Vector({
+  features: [iconFeature]
+});
+
+  
+  
   new ol.Map({
     layers: [
-      new ol.layer.Tile({source: new ol.source.OSM()})
+      new ol.layer.Tile({source: new ol.source.OSM()}),
+      new ol.layer.Tile({source: vectorSource})
     ],
     view: new ol.View({
       center: [ {{ site.data.address.latitude }},{{ site.data.address.longitude }}],
