@@ -1,6 +1,8 @@
 <div >
+  <div style="margin: 10px;">
   <h1> آدرس </h1>
   <p>{{ site.data.address.address }}</p>
+   </div>
 <div id="map" style="width: 100%; height: 200px"></div>
 <style type="text/css"> @import url("{{"assets/css/ol.css" | prepend: site.baseurl }}"); </style>
 <script src="{{"assets/js/ol.js" | prepend: site.baseurl }}"></script>
@@ -54,5 +56,4 @@ var vectorLayer = new ol.layer.Vector({
   });
   
 </script>
-  
 </div>
