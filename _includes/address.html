@@ -23,7 +23,7 @@ var vectorSource = new ol.source.Vector({
 
 var iconStyle = new ol.style.Style({
   image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-    anchor: [0.5, 46],
+    anchor: [0.5, 64],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     opacity: 0.75,
@@ -41,13 +41,13 @@ var vectorLayer = new ol.layer.Vector({
 
   
   
-  new ol.Map({
+  var map=new ol.Map({
     layers: [
       new ol.layer.Tile({source: new ol.source.OSM()}),
       vectorLayer
     ],
     view: new ol.View({
-      center: [ {{ site.data.address.latitude }},{{ site.data.address.longitude }}],
+      center: [ {{ site.data.address.latitude }} , {{ site.data.address.longitude }} ],
       zoom: {{ site.data.address.mapzoom }}
     }),
     target: 'map'
